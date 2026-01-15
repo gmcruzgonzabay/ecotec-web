@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Sitio Web Ecotec</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
-        <meta name="viewport" content="width=device-width,initial-scale=0.1"/> 
-        <meta name="theme-color" content="#ff5733"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Story+Script&display=swap" rel="stylesheet">
-       
-        <!-- Imagen o logo del sitio-->
-        <link rel="icon" href="img/logo.png" type="image/png"/> 
-         <!--etiqueta para indexacion de buscadores --> 
-        <meta name="description" content="Sitio web de ECOTEC">
-        <meta name="robots" content="index, nofollow"/>
-    </head>
-    <body>
-        
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="carreras.html">Carreras</a></li>
-                <li> <a href="contacto.html">Contactos</a>    </li>
-            </ul>
-        </nav>
-        <!--Contenido Principal -->
-        <main >
-            
-           
-            <section>
-            <h2>Bienvenido</h2>
-                <p>Este Sitio fue creado por los alumnos de Diseño de Sitios Web</p>
-            </section>
-            
-             <section>
-                 <img src="img/banner01.jpg" width="100%">
-                 <p>Formación académica de excelencia</p>
-            </section>
-            <!--Listas no ordenadas !-->
-            <section>
-            <h2>Temas del curso</h2>
-                <ul>
-                <li>HTML Básico</li>
-                <li>Estructura de páginas</li>
-                <li>Formularios</li>    
-                </ul>
-            </section>
-              <!--Listas ordenadas !-->
-            <section>
-                <ol>
-                    <li>Crear archivos</li>
-                    <li>Escribir código</li>
-                    <li>Guardar archivo</li>
-                </ol>
-            </section>
-            
-            <section>
-            <h2>Información Institucional</h2>
-                <article>
-                <h3>Misión</h3>
-                <p>Brindar una educación de calidad orientada a tecnologias</p>    
-                </article>
-            </section>
-            <!--Tablas -->
-            <section>
-                <h2>Horario de clases</h2>
-                <table border="1">
-                <tr>
-                    <th>Día</th> 
-                    <th>Hora</th>
-                    <th>Asignatura</th>
-                </tr>
-                    <tr>
-                    <td>Lunes</td>
-                    <td>19:00</td>
-                    <td>Diseño de sitios web</td>
-                    </tr>
-                    
-                    
-                    
-                </table>
-                
-            
-            </section>
-            
-            <section>
-            <h2>Formulario de admisión</h2>
-            <form>
-            <label for="nombre">Nombres:</label>
-            <input id="nombre" type="text" required><br><br>
-            <label for="correo">Email:</label>    
-            <input id="correo" type="email" required>  <br><br>
-            <select id="carrera" required>
-                <option value="">Seleccione carrera</option>
-                <option>Ingeniería en Sistemas</option>
-                <option>Marketing</option>
-                </select>    
-            <input type="submit" value="Enviar formulario">    
-                
-            </form>    
-            </section>
-        </main>
-        
-        <!-- Fin Contenido Principal -->
-       <!--Pie de página-->
-        <footer>
-            <address>Contactos admin@ecotec.edu.ec<br>Guayaquil-Ecuador</address>
-            <p>2026 Ecotec</p>
-        </footer>
-        <!-- fin Pie de página-->
-    </body>
-           
- 
+<head>
+  <meta charset="UTF-8">
+  <title>Sitio Web ECOTEC</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio web académico de la Universidad ECOTEC">
+  <meta name="robots" content="index, nofollow">
+
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- CSS y JS se verán en próximas clases -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+
+<header>
+  <h1>Universidad ECOTEC</h1>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carreras.html">Carreras</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Bienvenida</h2>
+    <p>Este sitio fue creado por los estudiantes de Diseño de Sitios Web.</p>
+  </section>
+
+  <section>
+    <h2>Campus Universitario</h2>
+    <img src="img/banner01.jpg" alt="Campus universitario de ECOTEC" width="100%">
+    <p>Formación académica de excelencia.</p>
+  </section>
+
+  <section>
+    <h2>Temas del curso</h2>
+    <ul>
+      <li>HTML básico</li>
+      <li>Estructura de páginas</li>
+      <li>Formularios</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Proceso de trabajo</h2>
+    <ol>
+      <li>Crear archivos</li>
+      <li>Escribir código</li>
+      <li>Guardar el archivo</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Información institucional</h2>
+
+    <article>
+      <h3>Misión</h3>
+      <p>Brindar una educación de calidad orientada a tecnologías.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Horario de clases</h2>
+
+    <table border="1">
+      <caption>Horario de la asignatura Diseño de Sitios Web</caption>
+      <tr>
+        <th>Día</th>
+        <th>Hora</th>
+        <th>Asignatura</th>
+      </tr>
+      <tr>
+        <td>Lunes</td>
+        <td>19:00</td>
+        <td>Diseño de Sitios Web</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Formulario de admisión</h2>
+
+    <form>
+      <label for="nombre">Nombres:</label><br>
+      <input id="nombre" type="text" required><br><br>
+
+      <label for="correo">Correo electrónico:</label><br>
+      <input id="correo" type="email" required><br><br>
+
+      <label for="carrera">Carrera:</label><br>
+      <select id="carrera" required>
+        <option value="">Seleccione carrera</option>
+        <option>Ingeniería en Sistemas</option>
+        <option>Marketing</option>
+      </select><br><br>
+
+      <button type="submit">Enviar formulario</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <address>
+    Contacto: admin@ecotec.edu.ec<br>
+    Guayaquil – Ecuador
+  </address>
+  <p>© 2026 Universidad ECOTEC</p>
+</footer>
+
+</body>
 </html>
