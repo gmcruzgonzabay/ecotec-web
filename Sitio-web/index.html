@@ -1,170 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <title>Clase 1 - Práctica HTML (30 min)</title>
-</head>
-
-<body>
-  <!-- 1) Encabezado -->
-  <header>
-    <h1>Mi primera página HTML</h1>
-    <p>
-      Hola, soy <strong>Tu Nombre</strong> 👋. Hoy aprenderé lo básico de HTML:
-      <em>estructura, textos, enlaces, imágenes y formularios</em>.
-    </p>
-    <hr />
-  </header>
-
-  <!-- 2) Navegación simple -->
-  <nav>
-    <p>
-      Ir a:
-      <a href="#sobre-mi">Sobre mí</a> |
-      <a href="#hobbies">Hobbies</a> |
-      <a href="#tabla">Tabla</a> |
-      <a href="#contacto">Contacto</a>
-    </p>
-    <hr />
-  </nav>
-
-  <main>
-    <!-- 3) Sección: Sobre mí -->
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Estoy en la clase de <strong>Programación III</strong> y esta es mi primera práctica.
-        HTML es el lenguaje para <mark>estructurar</mark> contenido en la web.
-      </p>
-
-      <h3>Datos rápidos</h3>
-      <ul>
-        <li>Ciudad: Guayaquil / Daule</li>
-        <li>Meta: crear páginas web bonitas y ordenadas</li>
-        <li>Herramienta: navegador + editor (VS Code / Brackets)</li>
-      </ul>
-      <hr />
-    </section>
-
-    <!-- 4) Sección: Hobbies + Enlace externo -->
-    <section id="hobbies">
-      <h2>Mis hobbies</h2>
-      <ol>
-        <li>Programar</li>
-        <li>Aprender cosas nuevas</li>
-        <li>Escuchar música</li>
-      </ol>
-
-      <p>
-        Recurso recomendado:
-        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">
-          Guía HTML en MDN
-        </a>
-      </p>
-
-      <h3>Imagen</h3>
-      <p>Si no tienes internet, puedes reemplazar la URL por una imagen local.</p>
-      <img
-        src="https://picsum.photos/800/300"
-        alt="Imagen de ejemplo"
-        width="800"
-      />
-      <hr />
-    </section>
-
-    <!-- 5) Sección: Tabla -->
-    <section id="tabla">
-      <h2>Tabla de ejemplo</h2>
-      <p>Una tabla sirve para mostrar datos en filas y columnas.</p>
-
-      <table border="1" cellpadding="8">
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Disponible</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Internet 200 Mbps</td>
-            <td>$25</td>
-            <td>Sí</td>
-          </tr>
-          <tr>
-            <td>Internet 500 Mbps</td>
-            <td>$35</td>
-            <td>Sí</td>
-          </tr>
-          <tr>
-            <td>Antivirus</td>
-            <td>$3</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
-      <hr />
-    </section>
-
-    <!-- 6) Sección: Formulario -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Este formulario no envía nada todavía (eso se ve con backend), pero ya practicamos campos.</p>
-
-      <form>
-        <p>
-          <label for="nombre">Nombre:</label><br />
-          <input type="text" id="nombre" name="nombre" placeholder="Ej: Gregorio" required />
-        </p>
-
-        <p>
-          <label for="correo">Correo:</label><br />
-          <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required />
-        </p>
-
-        <p>
-          <label for="tema">Tema:</label><br />
-          <select id="tema" name="tema">
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="js">JavaScript</option>
-          </select>
-        </p>
-
-        <p>
-          <label for="mensaje">Mensaje:</label><br />
-          <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje..."></textarea>
-        </p>
-
-        <p>
-          <input type="checkbox" id="acepto" name="acepto" required />
-          <label for="acepto">Acepto practicar y equivocarme hasta aprender 😄</label>
-        </p>
-
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpiar</button>
-      </form>
-      <hr />
-    </section>
-
-    <!-- 7) Mini reto (para cerrar la práctica) -->
-    <section id="reto">
-      <h2>Mini reto (5 minutos)</h2>
-      <ul>
-        <li>Cambia el título por el nombre de tu página.</li>
-        <li>Agrega un hobby más.</li>
-        <li>Agrega una fila nueva a la tabla.</li>
-        <li>Haz que la imagen tenga un ancho de 500.</li>
-      </ul>
-    </section>
-  </main>
-
-  <!-- 8) Pie de página -->
-  <footer>
-    <hr />
-    <p>
-      &copy; 2026 - Práctica de HTML. Hecho por <strong>Tu Nombre</strong>.
-    </p>
-  </footer>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sitio Web Ecotec</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=0.1"/> 
+        <meta name="theme-color" content="#ff5733"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Story+Script&display=swap" rel="stylesheet">
+       
+        <!-- Imagen o logo del sitio-->
+        <link rel="icon" href="img/logo.png" type="image/png"/> 
+         <!--etiqueta para indexacion de buscadores --> 
+        <meta name="description" content="Sitio web de ECOTEC">
+        <meta name="robots" content="index, nofollow"/>
+    </head>
+    <body>
+        
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carreras.html">Carreras</a></li>
+                <li> <a href="contacto.html">Contactos</a>    </li>
+            </ul>
+        </nav>
+        <!--Contenido Principal -->
+        <main >
+            
+           
+            <section>
+            <h2>Bienvenido</h2>
+                <p>Este Sitio fue creado por los alumnos de Diseño de Sitios Web</p>
+            </section>
+            
+             <section>
+                 <img src="img/banner01.jpg" width="100%">
+                 <p>Formación académica de excelencia</p>
+            </section>
+            <!--Listas no ordenadas !-->
+            <section>
+            <h2>Temas del curso</h2>
+                <ul>
+                <li>HTML Básico</li>
+                <li>Estructura de páginas</li>
+                <li>Formularios</li>    
+                </ul>
+            </section>
+              <!--Listas ordenadas !-->
+            <section>
+                <ol>
+                    <li>Crear archivos</li>
+                    <li>Escribir código</li>
+                    <li>Guardar archivo</li>
+                </ol>
+            </section>
+            
+            <section>
+            <h2>Información Institucional</h2>
+                <article>
+                <h3>Misión</h3>
+                <p>Brindar una educación de calidad orientada a tecnologias</p>    
+                </article>
+            </section>
+            <!--Tablas -->
+            <section>
+                <h2>Horario de clases</h2>
+                <table border="1">
+                <tr>
+                    <th>Día</th> 
+                    <th>Hora</th>
+                    <th>Asignatura</th>
+                </tr>
+                    <tr>
+                    <td>Lunes</td>
+                    <td>19:00</td>
+                    <td>Diseño de sitios web</td>
+                    </tr>
+                    
+                    
+                    
+                </table>
+                
+            
+            </section>
+            
+            <section>
+            <h2>Formulario de admisión</h2>
+            <form>
+            <label for="nombre">Nombres:</label>
+            <input id="nombre" type="text" required><br><br>
+            <label for="correo">Email:</label>    
+            <input id="correo" type="email" required>  <br><br>
+            <select id="carrera" required>
+                <option value="">Seleccione carrera</option>
+                <option>Ingeniería en Sistemas</option>
+                <option>Marketing</option>
+                </select>    
+            <input type="submit" value="Enviar formulario">    
+                
+            </form>    
+            </section>
+        </main>
+        
+        <!-- Fin Contenido Principal -->
+       <!--Pie de página-->
+        <footer>
+            <address>Contactos admin@ecotec.edu.ec<br>Guayaquil-Ecuador</address>
+            <p>2026 Ecotec</p>
+        </footer>
+        <!-- fin Pie de página-->
+    </body>
+           
+ 
 </html>
