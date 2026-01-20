@@ -15,19 +15,21 @@ selector{
 
 */
 h1{
-  color:rgb(23, 142, 104); /* Cambia color del texto */
+  color: #178e68;
+  margin-bottom: 10px;
 }
 body{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-    background-color: aqua; /* Cambia color de fondo*/
-    margin: 0px;
-
+  font-family: 'Segoe UI', Cambria, Georgia, serif;
+  background-color: #f4f6f8; /* fondo neutro y suave */
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
 }
 /*Media Query para Celulares*/
 @media (max-width:768px){
   body{
-    background-color:teal;
-    color:tomato;
+    background-color: #eef7f5;
+    color: #333;
   }
 img{
 border-radius: 10px;
@@ -54,11 +56,9 @@ border-radius: 10px;
 
 
 header{
-  background-color:antiquewhite;
-  color: white ;
-  padding:20px;
-
-
+  background-color: #178e68;
+  color: white;
+  padding: 20px 30px;
 }
 
 nav ul{
@@ -73,32 +73,38 @@ nav li{
 
 }
 nav a{
-  color:tomato;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 nav a:hover{
-  color: green;
-  text-decoration: underline;
+  background-color: rgba(255,255,255,0.2);
+  text-decoration: none;
 }
 /*Clases, en css*/
 .menu{
-  background-color: lightpink;
+  background-color: #e6f2ef;
+  padding: 15px;
+  border-radius: 10px;
 }
 .contenido{
-  padding: 20px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
 }
 section{
-  color:blueviolet
+  color: #444;
+  margin-bottom: 20px;
  
 }
 
 #bienvenida{
-  background-color: lightgray;
-  padding: 15px;
-  border-radius: 10px;
-  display: block; /* Hace que el elemento ocupe todo el ancho disponible */
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 
@@ -106,26 +112,25 @@ section{
 y en html lo llamo con el atributo class
 */
 .caja h2{
-  color:cadetblue;
-  transition:10s;
-
+  color: #178e68;
+  transition: color 0.3s ease;
 }
 
 /* #es un identificador y en HTML 
 se llama con el atributo id */
 #encabezado h1{
   font-size: 36px;
-  color:white
+  color: white;
+  margin: 0;
 }
 .menu a:hover{
-  color:yellow;
-  background-color: maroon;
-  padding:5px
+  background-color: #178e68;
+  color: white;
 }
 img{
   width: 100%;
   height: auto;
-
+  border-radius: 12px;
 }
 
 
