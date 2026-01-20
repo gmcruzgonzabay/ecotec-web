@@ -1,0 +1,137 @@
+.title {
+    color: green;
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 
+ESTRUCUTURA DE UN CSS
+selector{
+  propiedad: valor
+
+*/
+h1{
+  color:rgb(23, 142, 104); /* Cambia color del texto */
+}
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    background-color: aqua; /* Cambia color de fondo*/
+    margin: 0px;
+
+}
+/*Media Query para Celulares*/
+@media (max-width:768px){
+  body{
+    background-color:teal;
+    color:tomato;
+  }
+img{
+border-radius: 10px;
+
+}
+}
+
+
+
+/*Media Query para Tablets*/
+@media (min-width:768px) and (max-width:1024px){
+  body{
+    background-color:lightblue;
+    color:darkgreen;
+    
+      
+  }
+}
+/*Media Query para Desktops */
+
+
+  
+  
+
+
+header{
+  background-color:antiquewhite;
+  color: white ;
+  padding:20px;
+
+
+}
+
+nav ul{
+  list-style: none; /* Quita los puntos de la lista */
+  padding:0; /* Quita el padding */
+  margin:0/* Quita el margen */
+
+}
+nav li{
+  display: inline; /* Muestra los elementos en línea */
+  margin-right: 20px; /* Muestra los elementos en línea */
+
+}
+nav a{
+  color:tomato;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+nav a:hover{
+  color: green;
+  text-decoration: underline;
+}
+/*Clases, en css*/
+.menu{
+  background-color: lightpink;
+}
+.contenido{
+  padding: 20px;
+}
+section{
+  color:blueviolet
+ 
+}
+
+#bienvenida{
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 10px;
+  display: block; /* Hace que el elemento ocupe todo el ancho disponible */
+}
+
+
+/* si inicia con punto es una clase
+y en html lo llamo con el atributo class
+*/
+.caja h2{
+  color:cadetblue;
+  transition:10s;
+
+}
+
+/* #es un identificador y en HTML 
+se llama con el atributo id */
+#encabezado h1{
+  font-size: 36px;
+  color:white
+}
+.menu a:hover{
+  color:yellow;
+  background-color: maroon;
+  padding:5px
+}
+img{
+  width: 100%;
+  height: auto;
+
+}
+
+
+
+
+
+
+
+
