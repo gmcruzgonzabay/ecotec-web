@@ -1,0 +1,28 @@
+header{
+  background-color: #575858;
+  color: white;
+  padding: 20px 30px;
+
+  display: flex;              /* Coloca h1 y nav en una sola línea */
+  align-items: center;        /* Alinea verticalmente */
+  justify-content: space-between; /* Separa título y menú */
+}
+
+nav ul{
+  list-style: none;
+  color: aliceblue;
+  padding: 0;
+  margin: 0;
+  display: flex;      /* Menú horizontal */
+  gap: 20px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: white;
+  text-decoration: underline;
+}
