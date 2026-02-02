@@ -9,7 +9,6 @@ class Persona{
         return `Nombre:${this.nombre}, Edad: ${this.edad}`;
     }
 }// Fin de la clase persona
-
 //llamo al evento click del boton
     document.getElementById("btn").addEventListener("click",()=>{
         const p= new Persona("Ana",25);
