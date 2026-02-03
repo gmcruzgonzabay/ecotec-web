@@ -92,7 +92,7 @@ class Persona
                 tr.innerHTML=`
                 <td>${persona.nombre}</td>
                 <td>${persona.email}</td>
-                <td>${persona.ciudad}</td>
+                <td>${persona.ciudad}</td> 
                 <td>${persona.empresa}</td>
                 `;
                 tbody.appendChild(tr);
