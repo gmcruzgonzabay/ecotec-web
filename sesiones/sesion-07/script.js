@@ -70,13 +70,36 @@ class Persona
         }// fin catch
     } // fin de la funcion async cargarPersonas
    
-    function mostrarPersonas(personas){
+    //Muestra información del api en etiqueta <pre>
+   /* function mostrarPersonas(personas){
         resultado.innerHTML="";
         personas.forEach(persona=>{
             const pre= document.createElement("pre");
             pre.textContent=persona.info();
             resultado.appendChild(pre);
         });
+    }*/
+    
+    
+        function mostrarPersonas(personas){
+        
+            const tbody=document.querySelector("#tablaPersonas tbody ");
+            tbody.innerHTML="";
+            
+            personas.forEach(persona=>{
+               
+                const tr = document.createElement("tr");
+                tr.innerHTML=`
+                <td>${persona.nombre}</td>
+                <td>${persona.email}</td>
+                <td>${persona.ciudad}</td>
+                <td>${persona.empresa}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+           
+            resultado.innerText="";
+        
     }
 
 
