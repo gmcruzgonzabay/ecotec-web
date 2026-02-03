@@ -1,11 +1,13 @@
 //Inicio de la clase persona
 class Persona{
+    
  constructor(nombre,edad)
     {
         this.nombre=nombre;
         this.edad=edad;
     }
-    info(){
+    info()
+    {
         return `Nombre:${this.nombre}, Edad: ${this.edad}`;
     }
 }// Fin de la clase persona
@@ -14,3 +16,11 @@ class Persona{
         const p= new Persona("Ana",25);
         document.getElementById("resultado").innerText=p.info();   
     });
+
+/*
+ * EXAMEN PARCIAL
+DESDE 06/02/2026
+HORA 19:00
+HASTA: 09/02/2026
+HORA 23:00
+*/
