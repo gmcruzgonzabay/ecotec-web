@@ -3,25 +3,39 @@ document.addEventListener("DOMContentLoaded", function () {
     //declaraciones globales
     const btnCargar = document.getElementById("btnCargar");
     const resultado = document.getElementById("resultado");
-    
+    const ordenarAZ=document.getElementById("ordenarAZ");
+    const ordenarZA=document.getElementById("ordenarZA");
     //Para la búsqueda
     let personasGlobal=[];
     const buscar=document.getElementById("buscar");
-    
-    
+     
 
-    //Eventos
+    //Eventos 
     btnCargar.addEventListener("click", cargarPersonas);
     buscar.addEventListener("keyup",filtrarPersonas);
+    ordenarAZ.addEventListener("click",ordenarNombreAZ);
+    ordenarZA.addEventListener("click",ordenarNombreZA);
+    
     
     //Buscar por nombre
     function filtrarPersonas(){
         console.log("Ingresa a Filtrar Persona");
         const texto=buscar.value.toLowerCase();
-        const personasFiltradas=personasGlobal.filter((persona=>persona.nombre.toLowerCase().includes(texto)));
+        const personasFiltradas=personasGlobal.filter((persona)=>
+        persona.nombre.toLowerCase().includes(texto) || persona.ciudad.toLowerCase().includes(texto) );
     mostrarPersonas(personasFiltradas);
     }
+    //Ordena de A-Z
+    function ordenarNombreAZ(){
+        personasGlobal.sort((a,b)=>a.nombre.localeCompare(b.nombre));
+        mostrarPersonas(personasGlobal);
+    }
     
+    //Ordena de Z-A
+        function ordenarNombreZA(){
+        personasGlobal.sort((a,b)=>b.nombre.localeCompare(a.nombre));
+        mostrarPersonas(personasGlobal);
+    }
 
     class Persona {
         //Inicializo los atributos de la clase
@@ -61,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(total);
             console.log(totalpersonas);
             document.getElementById("total").innerText = `Total de usuarios:${data.length}`;
+            personasGlobal=personas;
 
             //Cambio en las fechas del examen parcial
             //del 6 de febrero a las 19:00 al 8 de Febrero 23:00
