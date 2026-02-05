@@ -1,5 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Archivo cargado");
+    //declaraciones globales
+    const btnCargar = document.getElementById("btnCargar");
+    const resultado = document.getElementById("resultado");
+    
+    //Para la búsqueda
+    let personasGlobal=[];
+    const buscar=document.getElementById("buscar");
+    
+    
+
+    //Eventos
+    btnCargar.addEventListener("click", cargarPersonas);
+    buscar.addEventListener("keyup",filtrarPersonas);
+    
+    //Buscar por nombre
+    function filtrarPersonas(){
+        console.log("Ingresa a Filtrar Persona");
+        const texto=buscar.value.toLowerCase();
+        const personasFiltradas=personasGlobal.filter((persona=>persona.nombre.toLowerCase().includes(texto)));
+    mostrarPersonas(personasFiltradas);
+    }
+    
 
     class Persona {
         //Inicializo los atributos de la clase
@@ -16,28 +38,42 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     } //fin clase Persona
 
-    const btnCargar = document.getElementById("btnCargar");
-    const resultado = document.getElementById("resultado");
-
-    btnCargar.addEventListener("click", cargarPersonas);
-
     async function cargarPersonas() {
+        document.getElementById("spinner").classList.remove("d-none");
+        //Desactivo el boton
+        btnCargar.disabled = true;
+
         try {
-           
+            //Simular el tiempo de espera
+            //esperar(100);
             resultado.innerText = "Cargando datos......";
             const response = await fetch("https://jsonplaceholder.typicode.com/users");
+            if (!response.ok) {
+                throw new Error("Error Http" + response.status);
+            }
             const data = await response.json();
             const personas = data.map(
                 (user) => new Persona(user.name, user.email, user.address.city, user.company.name)
             );
+            //Total de usuarios
+            const total = data.length;
+            const totalpersonas = personas.length;
+            console.log(total);
+            console.log(totalpersonas);
             document.getElementById("total").innerText = `Total de usuarios:${data.length}`;
+
+            //Cambio en las fechas del examen parcial
+            //del 6 de febrero a las 19:00 al 8 de Febrero 23:00
 
             mostrarPersonas(personas);
         } catch (error) {
-            // fin try
             resultado.innerText = "Error al consultar los datos";
             console.error(error);
-        } 
+        } finally {
+            console.log("Ingresa al bloque del finally");
+            document.getElementById("spinner").classList.add("d-none");
+            btnCargar.disabled = false;
+        }//final finally
     } // fin de la funcion async cargarPersonas
 
     function mostrarPersonas(personas) {
@@ -56,5 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         resultado.innerText = "";
+    }
+
+    function esperar(ms) {
+        return new Promise((resolve) => setTimeout((resolve, ms)));
     }
 });
