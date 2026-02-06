@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             //Simular el tiempo de espera
-            //esperar(100);
+          await  esperar(2000);
             resultado.innerText = "Cargando datos......";
             const response = await fetch("https://jsonplaceholder.typicode.com/users");
             if (!response.ok) {
@@ -110,6 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function esperar(ms) {
-        return new Promise((resolve) => setTimeout((resolve, ms)));
+        return new Promise((resolve) => setTimeout(resolve, ms));
     }
 });
