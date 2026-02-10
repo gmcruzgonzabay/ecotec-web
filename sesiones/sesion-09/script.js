@@ -101,8 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${persona.email}</td>
                 <td>${persona.ciudad}</td> 
                 <td>${persona.empresa}</td>
-                <button class="btn btn-sm btn-danger">Eliminar</button>
-               
+                <td>
+                <button class="btn btn-sm btn-danger button">Eliminar</button>
+                <button  class="btn btn-sm btn-info me-1">Ver</button>
+               </td>
                 `;
             tbody.appendChild(tr);
             
@@ -111,10 +113,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 eliminarPersona(persona.email);
             });
             
+            //llamar a la función para ver el detalle del usuario
+            
+            const btnVer= tr.querySelector(".btn-info");
+            btnVer.addEventListener("click",()=>{
+                                    
+                verDetalle(persona);
+                                    });
+            
             
         });
 
         resultado.innerText = "";
+    }
+    
+    //Funcion para ver detalle del usuario
+    function verDetalle(persona){
+        alert(
+        `
+        DETALLE DEL USUARIO \n\n` +
+        `Nombre: ${persona.nombre}\n`+
+        `Email: ${persona.email}\n`+
+        `Ciudad:${persona.ciudad}\n`+
+        `Empresa:${persona.empresa}`    
+        
+        
+        
+        );
     }
 
     //Funcion para eliminar un registro
