@@ -105,6 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
                
                 `;
             tbody.appendChild(tr);
+            
+            const btnEliminar=tr.querySelector("button");
+            btnEliminar.addEventListener("click",()=>{
+                eliminarPersona(persona.email);
+            });
+            
+            
         });
 
         resultado.innerText = "";
