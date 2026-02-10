@@ -5,6 +5,48 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultado = document.getElementById("resultado");
     const ordenarAZ = document.getElementById("ordenarAZ");
     const ordenarZA = document.getElementById("ordenarZA");
+    let paginaActual=1;
+    const porPagina=5;
+    let personaVista=[];
+    const btnPrev= document.getElementById("prev");
+    const btnNext=document.getElementById("next");
+    const pageInfo=document.getElementById("pageInfo");
+    
+    
+    //Funcion para cambiar de página
+    function cambiarPagina(delta){
+        const totalPaginas=Math.ceil(personaVista.length/porPagina) || 1;
+        paginaActual=paginaActual+delta;
+        if(paginaActual<1)
+        {
+            paginaActual=1;
+        }
+        if(paginaActual>totalPaginas)
+            {
+            paginaActual=totalPaginas;
+            }
+        
+        
+    }
+    
+    //Renderizar o dibujar nueva tabla
+    
+    function renderPagina(){
+        const inicio=(paginaActual-1)*porPagina;
+        const fin=inicio+porPagina;
+        const lista=personaVista.slice(inicio,fin);
+        
+        mostrarPersonas(lista);
+        const totalPagina=math.ceil(personaVista.length/porPagina) || 1;
+        pageInfo.innerText=`Página ${paginaActual} de ${totalPagina}`;
+        btnPrev.disabled=(paginaActual==1);
+        btnNext.disabled=(paginaActual==totalPagina);
+        
+        
+    }
+    
+    
+    
     //Para la búsqueda
     let personasGlobal = [];
     const buscar = document.getElementById("buscar");
@@ -22,7 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const personasFiltradas = personasGlobal.filter(
             (persona) => persona.nombre.toLowerCase().includes(texto) || persona.ciudad.toLowerCase().includes(texto)
         );
-        mostrarPersonas(personasFiltradas);
+       
+        personaVista=personasFiltradas;
+        paginaActual=1;
+        renderPagina();
+        //mostrarPersonas(personasFiltradas);
     }
     //Ordena de A-Z
     function ordenarNombreAZ() {
@@ -75,11 +121,15 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(totalpersonas);
             document.getElementById("total").innerText = `Total de usuarios:${data.length}`;
             personasGlobal = personas;
-
+            personaVista=personasGlobal;
+            paginaActual=1;
+            renderPagina();
+            return;
+            
             //Cambio en las fechas del examen parcial
             //del 6 de febrero a las 19:00 al 8 de Febrero 23:00
 
-            mostrarPersonas(personas);
+           // mostrarPersonas(personas);
         } catch (error) {
             resultado.innerText = "Error al consultar los datos";
             console.error(error);
@@ -117,10 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
             
             const btnVer= tr.querySelector(".btn-info");
             btnVer.addEventListener("click",()=>{
-                                    
                 verDetalle(persona);
                                     });
-            
             
         });
 
